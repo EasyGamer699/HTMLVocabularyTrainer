@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokabeltrainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <section id="upload-section">
+            <h2>Vokabeln hochladen</h2>
+            <input type="file" id="file-input" accept=".json,.csv">
+            <button id="upload-button">Hochladen</button>
+        </section>
+
+        <section id="learn-section" style="display: none;">
+            <h2>Vokabeln lernen</h2>
+            <div id="card">
+                <div id="foreign-word"></div>
+                <div id="known-buttons" style="display: none;">
+                    <button id="correct-button">Richtig</button>
+                    <button id="wrong-button">Falsch</button>
+                </div>
+                <button id="reveal-button">Aufdecken</button>
+            </div>
+        </section>
+
+        <section id="stats-section" style="display: none;">
+            <h2>Statistik</h2>
+            <div id="stats"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
