@@ -3,6 +3,7 @@ const uploadButton = document.getElementById('upload-button');
 const learnSection = document.getElementById('learn-section');
 const card = document.getElementById('card');
 const foreignWord = document.getElementById('foreign-word');
+const translation = document.getElementById('translation');
 const revealButton = document.getElementById('reveal-button');
 const correctButton = document.getElementById('correct-button');
 const wrongButton = document.getElementById('wrong-button');
@@ -33,6 +34,7 @@ uploadButton.addEventListener('click', () => {
 
 revealButton.addEventListener('click', () => {
     foreignWord.style.visibility = 'visible';
+    translation.style.visibility = 'visible';
     revealButton.style.display = 'none';
     knownButtons.style.display = 'block';
 });
@@ -48,7 +50,9 @@ wrongButton.addEventListener('click', () => {
 function showCurrentWord() {
     if (currentVocabIndex < vocabList.length) {
         foreignWord.textContent = vocabList[currentVocabIndex].vokabel;
+        translation.textContent = vocabList[currentVocabIndex].bedeutung;
         foreignWord.style.visibility = 'hidden';
+        translation.style.visibility = 'hidden';
         revealButton.style.display = 'block';
         knownButtons.style.display = 'none';
     } else {
